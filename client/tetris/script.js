@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!isAtLeftEdge) currentPosition -= 1;
 
-    if (current.some((index) => swaures[currentPositon + index].classList.contains('taken'))) {
+    if (current.some((index) => swaures[currentPosition + index].classList.contains('taken'))) {
       currentPosition += 1;
     }
 
@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // rotate the tetramino
   function rotate() {
     undraw();
-    currentRotation++;
-    if (currentRotation === current.length) { 
+    currentPosition++
+    if(currentRotation === current.length) { 
     // if the current rotation gets to 4, make it go bck to 0
       currentRotation = 0;
     }
