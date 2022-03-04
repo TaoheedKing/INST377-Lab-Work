@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .wrapper {
+    font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+    margin:0;
+  }
+  
+  .page-title {
+    background-color: #10a366;
+  }
+
+  .menu-container {
+    /* ... */
+    background-color: #5995DA;  /* Blue */
+    display: flex;
+    justify-content: center;    /* Add this */
+  }
+  
+  .menu {
+    border: 1px solid #fff;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .links {
+    border: 1px solid #fff;  /* For debugging */
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .login {
+    margin-left: 20px;
+  }
+  
+  .header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header {
+    width: px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Add this */
+  }
+
+  .photo-grid-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel {
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    width: 600px;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+  }
+
+  #carousel-button-prev, #carousel-button-next {
+    background-color: red;
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel__item.visible {
+    display: block;
+  }
+  .carousel__item.hidden {
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+
+  /*
+  .carousel .carousel__item--hidden {
+    display: none;
+  }
+
+  .carousel .carousel__item--visible {
+    display: block;
+  }
+
+  .carousel .carousel__actions button {
+    background-color: red;
+  } */
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    flex: 1;
+  }
+  
+  .footer-three {
+    flex: 2;
+  }
+  
+  .footer-one,
+  .footer-three {
+    background-color: #5995DA;
+    flex: initial;
+    width: 300px;
+  }
+  
+  .signup {
+    margin-left: auto;
+  }
+
+  /* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    body {
+      background-color: #F09A9D; /* Red */
+    }
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    .sign-up,
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+      width: 50%;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+    .page {
+      width: 960px;
+      margin: 0 auto;
+    }
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+      width: 33.3%;
+    }
+    .header {
+      height: 400px;
+    }
+    .sign-up {
+    height: 200px;
+    order: 1;
+    }
+    .content {
+    order: 2;
+    }
+  }

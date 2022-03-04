@@ -1,19 +1,60 @@
-YOUR NAME Lab 4: HTML Forms
-
-today's date
-Database Demos
-Main Page
-
-Group Project Link (no site yet)
-Awesome Logo
-Github Link
-
-image_1
-image_2
-image_3
-image_4
-image_5
-
-footer item 1
-footer item 2
-footer item 3
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Taoheed King Lab 4 - Javascript 1: Browser Events & Selectors - Click to Move</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
+  <body class='wrapper'>
+      <div class="page-title">
+        <h2> Taoheed King Lab 4 - Javascript 1: Browser Events & Selectors - Click to Move</h2>
+      </div>
+    <div class='menu-container'>
+      <div class='menu'>
+      <div class='date'>Feb 22, 2022</div>
+      <div class='signup'>Database Demos</div>
+      <div class='login'>Main Page</div>
+      </div>
+    </div>
+    <div class='header-container'>
+      <div class='header'>
+        <div class='subscribe'>Group Project Link (no site yet) &#9662;</div>
+        <div class='logo'><img src='images/awesome-logo.svg'/></div>
+        <div class='social'><a href="https://github.com/TaoheedKing">My Github Link</a></div>
+      </div>
+    </div>
+    <div class='photo-grid-container'>
+      <div class='carousel'>
+        <div class="prev">
+          <button id="carousel-button-prev">Prev</button>
+        </div>
+        <div class="carousel-images">
+          <div class='carousel__item hidden carousel__item visible'>
+          <img src='images/one.svg'/>
+        </div>
+        <div class='carousel__item hidden'>
+          <img src='images/two.svg'/>
+        </div>
+        <div class='carousel__item hidden'>
+          <img src='images/three.svg'/>
+        </div>
+        <div class='carousel__item hidden'>
+          <img src='images/four.svg'/>
+        </div>
+        <div class='carousel__item hidden'>
+          <img src='images/five.svg'/>
+        </div>
+        </div>
+        <div class="next">
+          <button id="carousel-button-next">Next</button>
+        </div>
+      </div>
+    </div>
+    <div class='footer'>
+      <div class='footer-item footer-one'>footer item one</div>
+      <div class='footer-item footer-two'>footer item two</div>
+      <div class='footer-item footer-three'>footer item three</div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
