@@ -4,24 +4,55 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  background-color: darkslategray;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
-    ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+  ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
   background-color: darkslategray;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 /* Page Layout */
-.columns {
-  display: flex;
-  flex-wrap: wrap;
+
+#title {
+  background-color: yellow;
+  width: 100%;
+  text-align: center;
 }
 
 .wrapper {
   display: flex;
 }
+
 .container {
   max-width: 960px;
   margin-top: 25px;
+  flex-wrap: wrap;
+  background-color: darkslategray;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  font-family: inherit;
+  align-content: stretch;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.next {
+  align-items: center;
 }
