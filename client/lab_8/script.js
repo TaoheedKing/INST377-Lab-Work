@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable no-param-reassign */
 function mapinit(target) {
   map = L.map(target).setView([38.974, -76.86609], 13);
   L.tileLayer(
@@ -19,6 +21,7 @@ function mapinit(target) {
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
+  // eslint-disable-next-line max-len
   return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
 }
 
@@ -42,9 +45,9 @@ function addmarkers(map, collection) {
   });
   collection.forEach((item, index) => {
     const point = item.geocoded_column_1?.coordinates;
-    console.log("checking if point works", point);
+    console.log('checking if point works', point);
     L.marker([point[1], point[0]]).addTo(map);
-    if (index === 0 && point){
+    if (index === 0 && point) {
       map.setView([point[1], point[0]]);
     }
   });
@@ -95,7 +98,7 @@ async function mainEvent() { // the async keyword means we can make API requests
     const restaurants = currentArray.filter((item) => item.name.toLowerCase().includes(event.target.value.toLowerCase()));
     console.log(restaurants, 'filtering');
     const restaurantsCoordinates = restaurants.filter((item) => item.geocoded_column_1);
-    console.log("checkinggggggg", restaurantsCoordinates);
+    console.log('checkinggggggg', restaurantsCoordinates);
     addmarkers(map, restaurantsCoordinates);
     inject(restaurants);
   });
@@ -107,7 +110,7 @@ async function mainEvent() { // the async keyword means we can make API requests
     const restaurants = currentArray.filter((item) => item.zip.toLowerCase().includes(event.target.value.toLowerCase()));
     console.log(restaurants, 'filtering');
     const restaurantsCoordinates = restaurants.filter((item) => item.geocoded_column_1);
-    console.log("checkinggggggg", restaurantsCoordinates);
+    console.log('checkinggggggg', restaurantsCoordinates);
     addmarkers(map, restaurantsCoordinates);
     inject(restaurants);
   });

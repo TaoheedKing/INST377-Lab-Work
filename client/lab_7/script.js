@@ -1,6 +1,9 @@
 function getRandomIntInclusive(min, max) {
+  // eslint-disable-next-line no-param-reassign
   min = Math.ceil(min);
+  // eslint-disable-next-line no-param-reassign
   max = Math.floor(max);
+  // eslint-disable-next-line max-len
   return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
 }
 
@@ -50,8 +53,8 @@ async function mainEvent() { // the async keyword means we can make API requests
     if (!currentArray.length) {
       return;
     }
-    const restaurants = currentArray.filter((item) => 
-      item.name.toLowerCase().includes(event.target.value.toLowerCase()));
+    // eslint-disable-next-line max-len
+    const restaurants = currentArray.filter((item) => item.name.toLowerCase().includes(event.target.value.toLowerCase()));
     console.log(restaurants, 'filtering');
     inject(restaurants);
   });
@@ -60,8 +63,8 @@ async function mainEvent() { // the async keyword means we can make API requests
     if (!currentArray.length) {
       return;
     }
-    const restaurants = currentArray.filter((item) => 
-      item.zip.toLowerCase().includes(event.target.value.toLowerCase()));
+    // eslint-disable-next-line max-len
+    const restaurants = currentArray.filter((item) => item.zip.toLowerCase().includes(event.target.value.toLowerCase()));
     console.log(restaurants, 'filtering');
     inject(restaurants);
   });
